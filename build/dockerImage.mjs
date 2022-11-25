@@ -102,9 +102,9 @@ function startBuildingDockerImage(gitInfo) {
     } (git-tags: ${gitInfo.tags.join(' ')})`
   );
 
-  const user = process.env.DOCKER_USERNAME || 'xeronimus';
-  const userAndProject = `${user}/poinz`;
-  const tags = [`${userAndProject}:latest`, HEROKU_DEPLOYMENT_TAG];
+  const user = process.env.DOCKER_USERNAME || 'choss';
+  const userAndProject = `${user}/poinz-docker-custom`;
+  const tags = [`${userAndProject}:latest`];
   gitInfo.tags.forEach((gitTag) => tags.push(`${userAndProject}:${gitTag}`));
   const cmdArgs = `build ${tags.map((tg) => '-t ' + tg).join(' ')} --network=host .`;
 
