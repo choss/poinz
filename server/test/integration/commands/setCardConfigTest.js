@@ -57,7 +57,7 @@ test('Should use defaultCardConfig if empty array in command (reset)', async () 
 
   const [cardConfigSetEvent] = producedEvents;
 
-  expect(cardConfigSetEvent.payload.cardConfig.length).toBe(12);
+  expect(cardConfigSetEvent.payload.cardConfig.length).toBe(9);
 });
 
 describe('preconditions', () => {
